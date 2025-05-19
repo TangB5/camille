@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Bloquer l'accès à .env
+<Files ".env">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Bloquer l'accès au dossier includes
+<Directory "includes">
+    Order Deny,Allow
+    Deny from all
+</Directory>
