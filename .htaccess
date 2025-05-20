@@ -1,0 +1,12 @@
+# Activer le moteur de réécriture
+RewriteEngine On
+
+# Bloquer l'accès à .env
+<Files ".env">
+    Require all denied
+</Files>
+
+# Bloquer l'accès aux fichiers PHP dans le dossier includes/
+<Files "includes/*.php">
+    Require all denied
+</Files>
